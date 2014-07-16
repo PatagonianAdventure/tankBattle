@@ -12,6 +12,7 @@ public class Level1 : MonoBehaviour {
 	void Update () {
 		if (Input.GetKey ("escape")) {
 			Application.LoadLevel("MainMenu"); 
+			//Application.Quit();
 		}
 	}
 }
