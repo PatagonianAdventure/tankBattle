@@ -16,12 +16,29 @@ public class MainMenuGUI : MonoBehaviour {
 	}
 
 	void OnGUI() {
-		if (GUI.Button (new Rect (10, 10, 150, 50), "Play")) {
+		// Build area of entire screen
+		// mucho codigo...es un layout flexible...pufff
+		GUILayout.BeginArea(new Rect(0, 0, Screen.width, Screen.height));
+		GUILayout.FlexibleSpace();
+		GUILayout.BeginHorizontal();
+		GUILayout.FlexibleSpace();
+		
+		if (GUILayout.Button("Play")) {
 			Application.LoadLevel("Level1");
 		}
 
-		if (GUI.Button (new Rect (10, 60, 150, 50), "Exit!")) {
+		GUILayout.FlexibleSpace();
+		GUILayout.EndHorizontal();
+		GUILayout.BeginHorizontal();
+		GUILayout.FlexibleSpace();
+
+		if (GUILayout.Button("Exit!")) {
 			Application.Quit();
 		}
+		
+		GUILayout.FlexibleSpace();
+		GUILayout.EndHorizontal();
+		GUILayout.FlexibleSpace();
+		GUILayout.EndArea();
 	}
 }
