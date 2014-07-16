@@ -16,14 +16,12 @@ public class MainMenuGUI : MonoBehaviour {
 	}
 
 	void OnGUI() {
-		if (GUI.Button (new Rect (10, 10, 150, 100), "I am a button")) {
-			print("You clicked the button!");
+		if (GUI.Button (new Rect (10, 10, 150, 50), "Play")) {
+			Application.LoadLevel("Level1");
 		}
 
-		if (GUI.Button (new Rect (10, 110, 150, 100), "Exit!")) {
+		if (GUI.Button (new Rect (10, 60, 150, 100), "Exit!")) {
 			Application.Quit();
 		}
-
-		
 	}
 }
