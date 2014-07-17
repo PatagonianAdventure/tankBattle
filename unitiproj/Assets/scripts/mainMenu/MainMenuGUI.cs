@@ -3,9 +3,11 @@ using System.Collections;
 
 public class MainMenuGUI : MonoBehaviour {
 
+	long start = 0;
+
 	// Use this for initialization
 	void Start () {
-	
+		start = System.DateTime.Now.Ticks;
 	}
 	
 	// Update is called once per frame
@@ -19,7 +21,7 @@ public class MainMenuGUI : MonoBehaviour {
 		// Build area of entire screen
 		// mucho codigo...es un layout flexible...pufff
 		GUILayout.BeginArea(new Rect(0, 0, Screen.width, Screen.height));
-		GUILayout.FlexibleSpace();
+
 		GUILayout.BeginHorizontal();
 		GUILayout.FlexibleSpace();
 		
